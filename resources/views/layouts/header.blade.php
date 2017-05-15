@@ -18,7 +18,7 @@
 <body>
 <div id="app">
     <nav class="navbar navbar-default navbar-static-top" id="navigation">
-        <div class="col-md-5 col-lg-5 col-sm-12 col-xs-12 col-md-offset-3 " id="logoPlace">
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12  " id="logoPlace">
             <div class="navbar-header">
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
@@ -28,15 +28,17 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
+
             <a href="/"> <img src="images/logo main.png" alt="logo" title="logo" class="img-responsive center-block"></a>
 
         </div>
 
-        <div class="text-center col-md-5 col-lg-5  col-sm-12 col-xs-12 col-md-offset-3">
+        <div class="text-center col-md-12 col-lg-12  col-sm-12 col-xs-12 ">
 
 
-            <div class="collapse navbar-collapse"  id="app-navbar-collapse" >
+            <div class="collapse navbar-collapse vertical-center"  id="app-navbar-collapse" >
                 <!-- Right Side Of Navbar -->
+
                 <ul class="nav navbar-nav ">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
@@ -67,11 +69,16 @@
                         </li>
                     @endif
                 </ul>
+
             </div>
         </div>
     </nav>
-
+    <div class="row bg-danger">
+        <div class="col-md-10 col-lg-offset-1">
+        asdasdas
     @yield('content')
+        </div>
+    </div>
 </div>
 
 
