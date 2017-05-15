@@ -73,9 +73,9 @@
             </div>
         </div>
     </nav>
-    <div class="row bg-danger">
-        <div class="col-md-10 col-lg-offset-1">
-        asdasdas
+    <div class="row ">
+        <div class="col-md-10 col-lg-offset-1 col-md-offset-1 col-xs-offset-0 col-sm-offset-2 text-center ">
+
     @yield('content')
         </div>
     </div>
