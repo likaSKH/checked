@@ -1,13 +1,16 @@
+body{
+    margin:0 auto;
+}
 #navigation {
     min-height:300px;
     background-color: #2db8af;
+    background-image: url("../images/stream.png") ;
+    background-position: right top;
+    background-repeat: no-repeat;
 }
 #logoPlace{
     min-height: 200px;
     text-align: center;
-}
-#logoPlace:before{
-    background-image: url('../images/stream.png');
 }
 #logoPlace img {
     margin-top: 20px;
@@ -32,4 +35,37 @@
 }
 .navbar-default ul>li:last-child{
     border:1pt solid #232424;
+}
+
+.navbar-collapse>.navbar-nav{
+    justify-content: center;
+}
+
+.col-xs-offset-4_5 {
+    margin-left: 29.175%;
+}
+
+ul {
+    text-align:center;
+}
+li {
+    display:block;
+    float:left;
+
+    color:white;
+    margin-right:10px;
+}
+
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navbar .navbar-collapse {
+    text-align: center;
+}
+
+section{
+    min-height: 370px;
+    background-color: black;
 }
