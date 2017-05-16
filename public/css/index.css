@@ -62,8 +62,6 @@ ul {
 }
 li {
     display:block;
-    float:left;
-
     color:white;
     margin-right:10px;
 }
@@ -108,5 +106,45 @@ section{
     font-family: "Arial Narrow";
 }
 .marg{
-    margin: 2% ;
+    margin: 1% 0 0 0;
+}
+
+.fa-check{
+    font-size: 1.4em;
+    color: #2db8af;
+}
+
+.list-unstyled{
+    line-height: 2cm;
+}
+.list-unstyled >li{
+
+    font-size: 1.5em;
+    color: #232424;
+    font-family: Arial;
+}
+footer{
+    min-height: 180px;
+    background-color: #232424;
+
+}
+footer .list-inline{
+    margin-left: 10%;
+}
+
+footer .list-inline>li>a{
+    text-decoration: underline;
+    color: #c26248;
+    font-size: 1.2em;
+}
+
+footer .list-inline>li>a:hover{
+    color: #d67961;
+}
+
+#listicon{
+    padding-left: 10%;
+}
+#listicon>li{
+    float: left;
 }
