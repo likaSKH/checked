@@ -35,7 +35,7 @@ h2{
     font-size: 2em;
     color: #232424;
     font-weight: bold;
-    font-family:Arial;
+    font-family: Arial;
 }
 
 .navbar-default ul{
@@ -90,4 +90,23 @@ section{
     font-size: 1.2em;
     color: #232424;
     font-style: italic;
+}
+
+#box-wrapper {
+    background-image: url('../images/Schedule-Calendar-750x330.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100%;
+}
+#box-wrapper div>h1{
+    font-style: italic;
+    font-size:5em;
+    color: #232424;
+    line-height: 1.5;
+    font-family: "Arial Narrow";
+}
+.marg{
+    margin: 2% ;
 }
