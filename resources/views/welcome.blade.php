@@ -39,11 +39,25 @@
     <div class="row marg text-center" id="box-wrapper"  style="min-height: 300px" >
         <div class="text-center col-md-6 col-md-offset-3">
         <h1>When The Sky Is The Limit
-           <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All Tasks Are &nbsp; &nbsp;<img src="images/slogan.png" alt="slogan" ></h1></div>
+           <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; All Tasks Are <img src="images/slogan.png" alt="slogan" class="img-responsive" style="float: right; margin: 2% 0 2% 0;" ></h1></div>
 
 
     </div>
     <div class="row marg"  style="min-height: 280px" >
-        <div class="container bg-danger">dadadasdasdasd</div>
+        <div class="container  text-center">
+            <h1>Why Us?</h1>
+            <div class="col-md-6 ">
+                <ul class="list-unstyled text-left " >
+                    <li><i class="fa fa-check" aria-hidden="true"></i>Easy To Use</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>Flaxible</li>
+                </ul>
+            </div>
+            <div class="col-md-6 ">
+                <ul class="list-unstyled text-left">
+                    <li ><i class="fa fa-check" aria-hidden="true"></i>Collaborative</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i>Friendly Enviroment</li>
+                </ul>
+            </div>
+        </div>
     </div>
 @endsection
