@@ -79,10 +79,10 @@
 
     <footer>
         <div class="container "style="padding: 2%" >
-           <div class="col-md-3 col-lg-3 col-sm-12 col-xs-12" >
+           <div class="col-md-3 col-lg-3 col-sm-3 col-xs-12" >
                <img src="images/checked.png" alt="checked" class="img-responsive center-block" >
            </div>
-            <div class="col-md-9 col-lg-9 ">
+            <div class="col-md-9 col-lg-9 col-sm-9 col-xs-12">
                 <div class="row">
                     <ul class="list-inline text-left">
                         <li><a href="">Home</a></li>
