@@ -16,7 +16,6 @@
     </script>
 </head>
 <body>
-<div id="app">
     <nav class="navbar navbar-default navbar-static-top" id="navigation">
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12  " id="logoPlace">
             <div class="navbar-header">
@@ -73,13 +72,12 @@
             </div>
         </div>
     </nav>
-    <div class="row bg-danger">
-        <div class="col-md-10 col-lg-offset-1">
-        asdasdas
+
+
+
     @yield('content')
-        </div>
-    </div>
-</div>
+
+
 
 
     <script src="{{ asset('js/app.js') }}"></script>
