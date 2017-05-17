@@ -1,5 +1,6 @@
 @extends('layouts.header')
 @section("content")
+
     <div class="row marg">
     <div class="col-md-10 col-lg-10 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 col-xs-offset-0 col-sm-offset-0 text-center " style="min-height: 330px; padding: 0">
         <h1 class="text-capitalize" >{{__('messages.manage')}}</h1>
