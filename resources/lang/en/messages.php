@@ -22,7 +22,7 @@ return [
     'healthp2'=>'Manage your health',
     'slogan'=>'When The Sky Is The Limit 
          All Tasks Are',
-    'why_us'=>'Why Us',
+    'why_us'=>'Why Us?',
     'easy'=>'Easy To Use',
     'flexible'=>'Flexible',
     'collaborative'=>'Collaborative',

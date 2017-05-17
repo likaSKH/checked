@@ -16,7 +16,7 @@ return [
     'password' => 'მინიმუმ 6 სიმბოლო შეიყვანეთ',
     'reset' => 'პაროლი შეცვლილა',
     'sent' => 'ემაილზე გაიგზავნა პაროლის შეცვლის ლინკი',
-    'token' => 'This password reset token is invalid.',
-    'user' => "We can't find a user with that e-mail address.",
+    'token' => 'მისამართი პაროლის შესაცვლელად, არავალიდურია',
+    'user' => "მითითებული იმეილით მომხმარებელი ვერ მოიძებნა",
 
 ];
