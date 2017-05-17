@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="icon" href="images/checked.png">
     <link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
@@ -41,31 +42,14 @@
                 <ul class="nav navbar-nav ">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
-                        <li><a href="{{route('home')}}">Home</a></li>
-                        <li><a href="{{route('home')}}">Contact Us</a></li>
-                        <li><a href="{{ route('login') }}">Sign In</a></li>
-                        <li><a href="{{ route('register') }}">Sign Up</a></li>
+                        <li><a href="{{route('home')}}">{{__('messages.home')}}</a></li>
+                        <li><a href="{{route('home')}}">{{__('messages.contact_us')}}</a></li>
+                        <li><a href="{{ route('login') }}">{{__('messages.sign_in')}}</a></li>
+                        <li><a href="{{ route('register') }}">{{__('messages.sign_up')}}</a></li>
                     @else
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
-
-
-                            <ul class="dropdown-menu" role="menu">
-                                <li>
-                                    <a href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        Logout
-                                    </a>
-
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        {{ csrf_field() }}
-                                    </form>
-                                </li>
-                            </ul>
-                        </li>
+                        <li ><a href="{{route('home')}}">{{__('messages.home')}}</a></li>
+                        <li> <a href="{{route('home')}}">{{__('messages.contact_us')}}</a></li>
+                        <li><a href="{{route('home')}}">{{__('messages.my_profile')}}</a></li>
                     @endif
                 </ul>
 
@@ -84,12 +68,20 @@
            </div>
             <div class="col-md-9 col-lg-9 col-sm-9 col-xs-12">
                 <div class="row">
+                    @if(Auth::guest())
                     <ul class="list-inline text-left">
-                        <li><a href="">Home</a></li>
-                        <li><a href="">Contuct Us</a></li>
-                        <li><a href="">Sign In</a></li>
-                        <li><a href="">Sign Up</a></li>
+                        <li><a href="{{route('home')}}">{{__('messages.home')}}</a></li>
+                        <li><a href="{{route('home')}}">{{__('messages.contact_us')}}</a></li>
+                        <li><a href="{{ route('login') }}">{{__('messages.sign_in')}}</a></li>
+                        <li><a href="{{ route('register') }}">{{__('messages.sign_up')}}</a></li>
                     </ul>
+                        @else
+                        <ul class="list-inline text-left" style="margin-left: 15%">
+                            <li ><a href="{{route('home')}}">{{__('messages.home')}}</a></li>
+                            <li> <a href="{{route('home')}}">{{__('messages.contact_us')}}</a></li>
+                            <li><a href="{{route('home')}}">{{__('messages.my_profile')}}</a></li>
+                        </ul>
+                        @endif
                 </div>
                 <div class="row marg">
                     <ul class="list-inline text-center" id="listicon">
