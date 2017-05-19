@@ -14,6 +14,7 @@
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
+
     </script>
 </head>
 <body>
@@ -33,14 +34,26 @@
             <a href="/"> <img src="images/logo main.png" alt="logo" title="logo" class="img-responsive center-block"></a>
 
         </div>
+        <div class="col-md-2 col-lg-2 col-sm-2 col-xs-12 ">
+            <button >english</button>
+            <button>georgian</button>
+        <!--<a href=""><img  src="images/ukflag.png" class="img-responsive img-circle  flags" width="30px"></a>
 
-        <div class="text-center col-md-12 col-lg-12  col-sm-12 col-xs-12 ">
+            <a href="/ge"> <img  src="images/ge.png" class="img-responsive img-circle  flags" name="ge" width="30px"></a> -->
 
 
-            <div class="collapse navbar-collapse vertical-center"  id="app-navbar-collapse" >
+
+
+
+        </div>
+        <div class="text-center col-md-10 col-lg-10  col-sm-10 col-xs-12  ">
+
+
+            <div class="collapse navbar-collapse vertical-center "  id="app-navbar-collapse" >
                 <!-- Right Side Of Navbar -->
 
-                <ul class="nav navbar-nav ">
+
+                <ul class="nav navbar-nav  " style="margin-left: -18%;">
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{route('home')}}">{{__('messages.home')}}</a></li>

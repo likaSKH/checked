@@ -156,3 +156,9 @@ footer .list-inline>li>a:hover{
         margin-bottom: 5%;
     }
 }
+
+.flags{
+    float: left;
+    margin-top: 15%;
+    margin-left: 2%;
+}

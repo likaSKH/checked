@@ -34,11 +34,9 @@
                         <span class="icon-bar"></span>
                     </button>
 
+                <!--             <a href="//"><img  src="images/ukflag.png" class="img-responsive img-circle  flags" width="30px" ></a>
 
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
+                    <a href="/ge"> <img  src="images/ge.png" class="img-responsive img-circle  flags" name="ge" width="30px"></a>-->
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
