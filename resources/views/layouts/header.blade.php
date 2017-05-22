@@ -18,8 +18,21 @@
     </script>
 </head>
 <body>
+
     <nav class="navbar navbar-default navbar-static-top" id="navigation">
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12  " id="logoPlace">
+            <form action="{{route('lang')}}" method="post">
+                {{csrf_field()}}
+                <input type="text" value="ge" name="ge" hidden>
+                <input type="image" src="images/ge.png" alt="georgian" class="img-responsive img-circle" style="float: left; margin-top: 2%" width="50px" name="ge" >
+            </form>
+            <form action="{{route('lang')}}" method="post">
+                {{csrf_field()}}
+                <input type="text" value="en" name="en" hidden>
+                <input type="image"  src="images/ukflag.png" alt="american" class="img-responsive img-circle" style="float: left; margin-left: 5px; margin-top: 2%;" width="50px" name="en">
+            </form>
+
+
             <div class="navbar-header">
                 <!-- Collapsed Hamburger -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#app-navbar-collapse">
@@ -31,17 +44,10 @@
                 </button>
             </div>
 
-            <a href="/"> <img src="images/logo main.png" alt="logo" title="logo" class="img-responsive center-block"></a>
+            <a href="{{route('home')}}"> <img src="images/logo main.png" alt="logo" title="logo" class="img-responsive center-block"></a>
 
         </div>
         <div class="col-md-2 col-lg-2 col-sm-2 col-xs-12 ">
-            <button >english</button>
-            <button>georgian</button>
-        <!--<a href=""><img  src="images/ukflag.png" class="img-responsive img-circle  flags" width="30px"></a>
-
-            <a href="/ge"> <img  src="images/ge.png" class="img-responsive img-circle  flags" name="ge" width="30px"></a> -->
-
-
 
 
 
@@ -70,8 +76,6 @@
             </div>
         </div>
     </nav>
-
-
 
     @yield('content')
 
