@@ -13,6 +13,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/menu.css') }}" rel="stylesheet">
     <link href="{{ asset('css/panels.css') }}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
@@ -128,6 +129,6 @@
         </div>
     </footer>
 
-    <script src="{{ asset('js/app.js') }}"></script>
+<script src="{{asset('css/bootstrap/js/bootstrap.min.js')}}"></script>
 </body>
 </html>

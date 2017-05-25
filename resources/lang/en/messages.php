@@ -26,5 +26,6 @@ return [
     'easy'=>'Easy To Use',
     'flexible'=>'Flexible',
     'collaborative'=>'Collaborative',
-    'friendly_environment'=>'Friendly Environment'
+    'friendly_environment'=>'Friendly Environment',
+    'terms'=>"Terms And Privacy Policy",
 ];
