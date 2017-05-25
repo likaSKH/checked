@@ -1,0 +1,25 @@
+
+.navbar-default{
+    text-align: left;
+}
+.navbar-default .navbar-nav>li>a{
+    font-size: 2em;
+    color: #232424;
+    font-weight: bold;
+    font-family: Arial;
+}
+
+.navbar-default ul{
+    margin-top: 20px;
+}
+
+.navbar-default ul>li{
+    margin-left: 10px;
+}
+.navbar-default ul>li:last-child{
+    border:1pt solid #232424;
+}
+
+.navbar-collapse>.navbar-nav{
+    justify-content: center;
+}

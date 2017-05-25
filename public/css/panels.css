@@ -1,0 +1,15 @@
+.panel-default{
+    border: 1px solid #2db8af;
+    border-radius: 0px;
+    color:#232424;
+    font-family: "Arial Narrow";
+    font-size: 1.3em;
+}
+
+.panel-default>.panel-heading{
+    border-color: #2db8af;
+}
+.panel-default{
+    margin:10% 0 20% 0;
+
+}

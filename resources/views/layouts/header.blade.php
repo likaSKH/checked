@@ -5,11 +5,12 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Checked') }}</title>
     <link rel="icon" href="images/checked.png">
     <link rel="stylesheet" type="text/css" href="css/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/navigation.css')}}">
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
@@ -19,17 +20,17 @@
 </head>
 <body>
 
-    <nav class="navbar navbar-default navbar-static-top" id="navigation">
+    <nav class="navbar navbar-default navbar-static-top" id="navigation" style="min-height:300px;">
         <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12  " id="logoPlace">
-            <form action="{{route('lang')}}" method="post">
+            <form action="{{action('LanguageController@language')}}" method="post">
                 {{csrf_field()}}
-                <input type="text" value="ge" name="ge" hidden>
-                <input type="image" src="images/ge.png" alt="georgian" class="img-responsive img-circle" style="float: left; margin-top: 2%" width="50px" name="ge" >
+                <input type="text" value="{{Request::path()."/ge"}}" name="ge" hidden>
+                <input type="image" src="images/ge.png" alt="georgian" class="img-responsive img-circle lang"  width="50px" name="ge" >
             </form>
-            <form action="{{route('lang')}}" method="post">
+            <form action="{{action('LanguageController@language')}}" method="post">
                 {{csrf_field()}}
-                <input type="text" value="en" name="en" hidden>
-                <input type="image"  src="images/ukflag.png" alt="american" class="img-responsive img-circle" style="float: left; margin-left: 5px; margin-top: 2%;" width="50px" name="en">
+                <input type="text" value="{{Request::path()."/en"}}" name="en" hidden>
+                <input type="image"  src="images/ukflag.png" alt="american" class="img-responsive img-circle lang" style="margin-left: 5px;" width="50px" name="en">
             </form>
 
 
@@ -76,7 +77,11 @@
             </div>
         </div>
     </nav>
-
+    @if (session('status'))
+        <div class="alert alert-success">
+            {{ session('status') }}
+        </div>
+    @endif
     @yield('content')
 
     <footer>
@@ -112,7 +117,7 @@
         </div>
     </footer>
 
-
+    <script src="{{ asset('js/language.js') }}"></script>
     <script src="{{ asset('js/app.js') }}"></script>
 <script src="css/bootstrap/js/bootstrap.min.js"></script>
 </body>
