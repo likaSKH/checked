@@ -14,8 +14,8 @@
 
 
                             <div class="col-md-8 col-md-offset-2 ">
-                                <div class="inner-addon left-addon">
-                                <i class="glyphicon glyphicon-user spanstyle"></i>
+                                <div class="inner-addon left-addon forms" >
+                                    <i class="fa fa-user spanstyle " aria-hidden="true"></i>
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" placeholder="{{__('login.email')}}" required autofocus>
                                 </div>
                                 @if ($errors->has('email'))
@@ -30,8 +30,8 @@
 
 
                             <div class="col-md-8 col-md-offset-2 ">
-                                <div class="inner-addon left-addon">
-                                <i class="glyphicon glyphicon-lock spanstyle"></i>
+                                <div class="inner-addon left-addon forms">
+                                <i class="fa fa-lock spanstyle"></i>
                                 <input id="password" type="password" class="form-control" name="password" placeholder="{{__('login.password')}}" required>
                                 </div>
                                 @if ($errors->has('password'))
@@ -46,7 +46,7 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-2">
-                                <button type="submit" class="btn submitButtons col-md-12">
+                                <button type="submit" class="btn submitButtons  col-md-12 col-xs-12 col-sm-12">
                                     Login
                                 </button>
 

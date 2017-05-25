@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" type="text/css" href="{{asset('css/navigation.css')}}">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
@@ -117,8 +119,6 @@
         </div>
     </footer>
 
-    <script src="{{ asset('js/language.js') }}"></script>
-    <script src="{{ asset('js/app.js') }}"></script>
 <script src="css/bootstrap/js/bootstrap.min.js"></script>
 </body>
 </html>

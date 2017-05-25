@@ -19,7 +19,7 @@
 }
 
 /* style icon */
-.inner-addon .glyphicon {
+.inner-addon .fa {
     position: absolute;
     padding: 10px;
     pointer-events: none;
@@ -27,9 +27,16 @@
 }
 
 /* align icon */
-.left-addon .glyphicon  { left:  0px;}
-.right-addon .glyphicon { right: 0px;}
+.left-addon .fa  { left:  0px;}
+.right-addon .fa { right: 0px;}
 
 /* add padding  */
 .left-addon input  { padding-left:  30px; }
 .right-addon input { padding-right: 30px; }
+
+
+
+.forms>input{
+    border:1px solid #c26248;
+    border-radius: 0px;
+}
