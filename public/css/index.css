@@ -201,3 +201,10 @@ input:checked + .slider:before {
     float: left;
     margin-top: 2%;
 }
+
+.submitButtons{
+    background-color: #2db8af;
+    color: #232424;
+    text-align: center;
+    font-size: 1.2em;
+}
