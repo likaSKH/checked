@@ -2,11 +2,31 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+    <div class="row text-center" style="min-height: 500px;color: #232424">
+        <h1>Registration</h1>
+        <div style="margin-top: 5%" class="text-center">
+
+        <div class="col-md-5  text-center  blocks" >
+             <i class="fa fa-users" aria-hidden="true" style="font-size: 4em"></i>
+            <h1>Corporation</h1>
+        </div>
+
+        <div class="col-md-5 text-center blocks " style="float: right" >
+            <i class="fa fa-user" aria-hidden="true" style="font-size: 4em"></i>
+            <h1>Individuals</h1>
+        </div>
+
+    </div>
+<!--
+        <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading"><h2>{{__('register.register')}}</h2></div>
+                <div class="panel-heading text-center"><h2>{{__('register.register')}}</h2></div>
                 <div class="panel-body">
+
+
+
+
+
                     <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
@@ -147,9 +167,13 @@
                             </div>
                         </div>
                     </form>
-                </div>
-            </div>
+
+
+
+</div>
         </div>
+                </div>-->
+
     </div>
 </div>
 @endsection
