@@ -49,7 +49,7 @@
                     </button>
                 </div>
 
-                <a href="{{route('home')}}" > <img src="{{asset('images/logo.png')}}" alt="logo" title="logo" class="img-responsive " style="padding-top: 6%"> </a>
+                <a href="{{route('welcome')}}" > <img src="{{asset('images/logo.png')}}" alt="logo" title="logo" class="img-responsive " style="padding-top: 6%"> </a>
             </div>
 
 

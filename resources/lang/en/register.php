@@ -1,5 +1,6 @@
 <?php
 return [
+    "register"=>"Register",
     "signup"=>"Sign Up",
     "name"=>"Name",
     "confirm"=>"Confirm Password",
@@ -8,6 +9,6 @@ return [
     "residentialcountry"=>"Residential Country",
     "position"=>"Position",
     "company"=>"Company Name",
-    "city"=>"City"
-
+    "city"=>"City",
+    "juridical"=>"juridical user"
 ];

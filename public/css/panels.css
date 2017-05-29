@@ -40,3 +40,7 @@
     border:1px solid #c26248;
     border-radius: 0px;
 }
+.forms>input:focus{
+    border-color:#c26248 ;
+    box-shadow: #c26248 0.5px 0 5px;
+}
