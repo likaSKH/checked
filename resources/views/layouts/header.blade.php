@@ -47,7 +47,7 @@
                 </button>
             </div>
 
-            <a href="{{route('home')}}"> <img src="images/logo main.png" alt="logo" title="logo" class="img-responsive center-block"></a>
+            <a href="{{route('welcome')}}"> <img src="images/logo main.png" alt="logo" title="logo" class="img-responsive center-block"></a>
 
         </div>
         <div class="col-md-2 col-lg-2 col-sm-2 col-xs-12 ">

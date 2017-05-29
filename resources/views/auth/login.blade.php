@@ -47,7 +47,7 @@
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-2">
                                 <button type="submit" class="btn submitButtons  col-md-12 col-xs-12 col-sm-12">
-                                    Login
+                                    {{__('login.login')}}
                                 </button>
 
                             </div>
