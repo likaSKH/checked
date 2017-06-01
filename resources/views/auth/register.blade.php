@@ -2,21 +2,21 @@
 
 @section('content')
 <div class="container">
-    <div class="row text-center" style="min-height: 500px;color: #232424">
+    <div class="row text-center" style="min-height: 400px;color: #232424">
         <h1>Registration</h1>
-        <div style="margin-top: 5%" class="text-center">
+        <div style="margin-top: 5%" class="text-center row">
 
-        <div class="col-md-5  text-center  blocks" >
-             <i class="fa fa-users" aria-hidden="true" style="font-size: 4em"></i>
+        <button class="col-md-5  text-center  blocks" data-toggle="collapse" data-target="#juridical" >
+             <i class="fa fa-users" aria-hidden="true" style="font-size: 4em" ></i>
             <h1>Corporation</h1>
-        </div>
+        </button>
 
-        <div class="col-md-5 text-center blocks " style="float: right" >
+        <button class="col-md-5 text-center blocks " style="float: right" data-toggle="collapse" data-target="#individuals" >
             <i class="fa fa-user" aria-hidden="true" style="font-size: 4em"></i>
             <h1>Individuals</h1>
+        </button>
         </div>
 
-    </div>
 <!--
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
@@ -173,7 +173,17 @@
 </div>
         </div>
                 </div>-->
+        <div class="row bg-danger " >
+            <div id="juridical" class="collapse">
+                juridical
+            </div>
 
+            <div id="individuals" class="collapse" >
+                individuals
+            </div>
+        </div>
     </div>
+
+
 </div>
 @endsection
