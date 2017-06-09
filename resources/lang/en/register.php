@@ -10,5 +10,6 @@ return [
     "position"=>"Position",
     "company"=>"Company Name",
     "city"=>"City",
+    "country"=>'Country',
     "juridical"=>"juridical user"
 ];

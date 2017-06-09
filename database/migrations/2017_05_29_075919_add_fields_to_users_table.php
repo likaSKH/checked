@@ -22,6 +22,10 @@ class AddFieldsToUsersTable extends Migration
             $table->string('city');
             $table->string('country');
             $table->boolean('juridical');
+            $table->string('company_name');
+            $table->string('address1');
+            $table->string('address2');
+            $table->enum('gender',['1'=>'female','0'=>'male' ]);
         });
     }
 
@@ -41,6 +45,10 @@ class AddFieldsToUsersTable extends Migration
             $table->dropColumn('city');
             $table->dropColumn('country');
             $table->dropColumn('juridical');
+            $table->dropColumn('company_name');
+            $table->dropColumn('address1');
+            $table->dropColumn('address2');
+            $table->dropColumn('gender');
         });
     }
 }

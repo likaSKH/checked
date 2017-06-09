@@ -130,5 +130,6 @@
     </footer>
 
 <script src="{{asset('css/bootstrap/js/bootstrap.min.js')}}"></script>
+        <script src="{{asset('js/index.js')}}"></script>
 </body>
 </html>

@@ -7,6 +7,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::post('/register/jur','RegisterJurController@create')->name('registerJur');
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 //language change route
