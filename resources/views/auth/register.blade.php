@@ -275,6 +275,7 @@
                                                    value="{{ old('companyName') }}"
                                                    placeholder="{{__('register.companyName')}}" required>
 
+
                                             @if ($errors->has('companyName'))
                                                 <span class="help-block">
                                         <strong>{{ $errors->first('companyName') }}</strong>
