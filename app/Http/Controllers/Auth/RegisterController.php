@@ -103,6 +103,7 @@ class RegisterController extends Controller
                 'juridical' => '1',
                 'email' => $data['email'],
                 'password' => bcrypt($data['password']),
+                'gender'=>$data['genderJ']
             ]);
         } else {
             return User::create([
@@ -119,6 +120,7 @@ class RegisterController extends Controller
                 'address2'=>$data['address2'],
                 'email' => $data['email'],
                 'password' => bcrypt($data['password']),
+                'gender'=>$data['gender']
             ]);
         }
     }

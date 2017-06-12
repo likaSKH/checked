@@ -79,6 +79,14 @@
                                     </div>
 
 
+                                        <div class="form-group text-left">
+                                            <div class="col-md-8 col-md-offset-2 forms">
+                                            <label for="gender">Gender: </label>
+                                            <input id="gender" type="radio" class="radio-inline" name="gender" value="0">  Male
+                                            <input id="gender" type="radio" class="radio-inline" name="gender" value="1">  Female
+                                            </div>
+                                        </div>
+
                                     <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
                                         <div class="col-md-8 col-md-offset-2 forms">
                                             <input id="phone" type="text" class="form-control" name="phone"
@@ -253,6 +261,13 @@
                                         </div>
                                     </div>
 
+                                    <div class="form-group text-left">
+                                        <div class="col-md-8 col-md-offset-2 forms">
+                                            <label for="genderJ">Gender: </label>
+                                            <input id="genderJ" type="radio" class="radio-inline" name="genderJ" value="1">  Male
+                                            <input id="genderJ" type="radio" class="radio-inline" name="genderJ" value="2">  Female
+                                        </div>
+                                    </div>
 
                                     <div class="form-group{{ $errors->has('companyName') ? ' has-error' : '' }}">
                                         <div class="col-md-8 col-md-offset-2 forms">
