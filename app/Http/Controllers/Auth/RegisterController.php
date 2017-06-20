@@ -1,12 +1,16 @@
 <?php
 
+
 namespace App\Http\Controllers\Auth;
-use Illuminate\Support\Facades\Input;
+
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use phpDocumentor\Reflection\Types\Null_;
+
+Use Illuminate\Http\Request;
+Use DB;
+Use Mail;
 
 class RegisterController extends Controller
 {
@@ -99,11 +103,13 @@ class RegisterController extends Controller
                 'phone' => $data['bphone'],
                 'position' => $data['position'],
                 'city' => $data['businessCity'],
+                'birthDate' => '1900-01-01',
                 'country' => $data['businessCountry'],
                 'juridical' => '1',
+                'gender'=>$data['genderJ'],
                 'email' => $data['email'],
                 'password' => bcrypt($data['password']),
-                'gender'=>$data['genderJ']
+
             ]);
         } else {
             return User::create([
@@ -119,9 +125,54 @@ class RegisterController extends Controller
                 'address1'=>$data['address1'],
                 'address2'=>$data['address2'],
                 'email' => $data['email'],
+                'gender'=>$data['gender'],
                 'password' => bcrypt($data['password']),
-                'gender'=>$data['gender']
+
             ]);
         }
     }
+
+
+    public function register(Request $request){
+
+        $input =$request->all();
+        $validator = $this->validator($input);
+
+        if($validator->passes()){
+            $user=$this->create($input)->toArray();
+            $user['link']=str_random(30);
+
+            while()
+
+            DB::table('user_activations')->insert(['id_user'=>$user['id'],'token'=>$user['link']]);
+
+            Mail::send('emails.activation',$user, function($message) use ($user){
+                $message->to($user['email']);
+                $message->subject('www.perfectrent.com - Activation Code');
+            });
+
+            return back()->with('success', "We sent activation code, Please check your email");
+
+        }
+
+        return back()->with('errors', $validator->errors());
+    }
+
+
+    public function userActivation($token){
+        $check =DB::table('user_activations')->where('token', $token)->first();
+        if(!is_null($check)){
+            $user=  DB::table('users')->where('id',$check->id_user )->first();
+            if($user-> is_activated == 1){
+                return redirect()->route('login')->with('success',"User is already activated");
+            }
+
+            DB::table('users')->where('id',$check->id_user )->update(['is_activated'=>1]);
+
+           // DB::table('user_activations')->where('token', $token)->delete();
+            return redirect()->route('home')->with('success',"User active successfully");
+        }
+
+  }
+
 }

@@ -2,6 +2,22 @@
 
 @section('content')
     <div class="container">
+
+        @if ($message=Session::get('success'))
+            <div class="alert alert:success">
+                <p>
+                    {{$message}}
+                </p>
+            </div>
+        @endif
+
+        @if ($message=Session::get('warning'))
+            <div class="alert alert:warning">
+                <p>
+                    {{$message}}
+                </p>
+            </div>
+        @endif
         <div class="row text-center" style="min-height: 400px;color: #232424">
             <h1>Registration</h1>
             <div style="margin-top: 5%" class="text-center row">
@@ -82,8 +98,8 @@
                                         <div class="form-group text-left">
                                             <div class="col-md-8 col-md-offset-2 forms">
                                             <label for="gender">Gender: </label>
-                                            <input id="gender" type="radio" class="radio-inline" name="gender" value="0">  Male
-                                            <input id="gender" type="radio" class="radio-inline" name="gender" value="1">  Female
+                                            <input id="gender" type="radio" class="radio-inline" name="gender" value="male" checked>  Male
+                                            <input id="gender" type="radio" class="radio-inline" name="gender" value="female">  Female
                                             </div>
                                         </div>
 
@@ -264,8 +280,8 @@
                                     <div class="form-group text-left">
                                         <div class="col-md-8 col-md-offset-2 forms">
                                             <label for="genderJ">Gender: </label>
-                                            <input id="genderJ" type="radio" class="radio-inline" name="genderJ" value="1">  Male
-                                            <input id="genderJ" type="radio" class="radio-inline" name="genderJ" value="2">  Female
+                                            <input id="genderJ" type="radio" class="radio-inline" name="genderJ" value="male" checked>  Male
+                                            <input id="genderJ" type="radio" class="radio-inline" name="genderJ" value="female">  Female
                                         </div>
                                     </div>
 
