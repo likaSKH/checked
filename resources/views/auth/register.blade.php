@@ -2,6 +2,8 @@
 
 @section('content')
     <div class="container">
+
+
         <div class="row text-center" style="min-height: 400px;color: #232424">
             <h1>Registration</h1>
             <div style="margin-top: 5%" class="text-center row">
@@ -78,6 +80,14 @@
                                         </div>
                                     </div>
 
+
+                                        <div class="form-group text-left">
+                                            <div class="col-md-8 col-md-offset-2 forms">
+                                            <label for="gender">Gender: </label>
+                                            <input id="gender" type="radio" class="radio-inline" name="gender" value="male" checked>  Male
+                                            <input id="gender" type="radio" class="radio-inline" name="gender" value="female">  Female
+                                            </div>
+                                        </div>
 
                                     <div class="form-group{{ $errors->has('phone') ? ' has-error' : '' }}">
                                         <div class="col-md-8 col-md-offset-2 forms">
@@ -253,12 +263,20 @@
                                         </div>
                                     </div>
 
+                                    <div class="form-group text-left">
+                                        <div class="col-md-8 col-md-offset-2 forms">
+                                            <label for="genderJ">Gender: </label>
+                                            <input id="genderJ" type="radio" class="radio-inline" name="genderJ" value="male" checked>  Male
+                                            <input id="genderJ" type="radio" class="radio-inline" name="genderJ" value="female">  Female
+                                        </div>
+                                    </div>
 
                                     <div class="form-group{{ $errors->has('companyName') ? ' has-error' : '' }}">
                                         <div class="col-md-8 col-md-offset-2 forms">
                                             <input id="companyName" type="text" class="form-control" name="companyName"
                                                    value="{{ old('companyName') }}"
                                                    placeholder="{{__('register.companyName')}}" required>
+
 
                                             @if ($errors->has('companyName'))
                                                 <span class="help-block">

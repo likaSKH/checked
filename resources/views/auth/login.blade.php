@@ -3,7 +3,25 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2">
+
+
+
+        <div class="col-md-8 col-md-offset-2" style="padding-bottom:0px ">
+            @if ($message=Session::get('success'))
+                <div class="centered alert alert-success" style="border-radius: 0; margin-bottom: 0">
+                    <p>
+                        {{$message}}
+                    </p>
+                </div>
+            @endif
+
+            @if ($message=Session::get('warning'))
+                <div class="alert alert:warning" style="border-radius: 0; margin-bottom: 0">
+                    <p>
+                        {{$message}}
+                    </p>
+                </div>
+            @endif
             <div class="panel panel-default ">
                 <div class="panel-heading"><h2>{{__('login.login')}}</h2></div>
                 <div class="panel-body  ">

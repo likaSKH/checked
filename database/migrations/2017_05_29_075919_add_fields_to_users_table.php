@@ -25,7 +25,7 @@ class AddFieldsToUsersTable extends Migration
             $table->string('company_name');
             $table->string('address1');
             $table->string('address2');
-            $table->enum('gender',['1'=>'female','0'=>'male' ]);
+            $table->enum('gender',['female','male' ]);
         });
     }
 
