@@ -3,21 +3,7 @@
 @section('content')
     <div class="container">
 
-        @if ($message=Session::get('success'))
-            <div class="alert alert:success">
-                <p>
-                    {{$message}}
-                </p>
-            </div>
-        @endif
 
-        @if ($message=Session::get('warning'))
-            <div class="alert alert:warning">
-                <p>
-                    {{$message}}
-                </p>
-            </div>
-        @endif
         <div class="row text-center" style="min-height: 400px;color: #232424">
             <h1>Registration</h1>
             <div style="margin-top: 5%" class="text-center row">

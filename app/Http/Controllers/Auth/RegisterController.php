@@ -3,6 +3,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Activation;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -140,9 +141,17 @@ class RegisterController extends Controller
 
         if($validator->passes()){
             $user=$this->create($input)->toArray();
-            $user['link']=str_random(30);
 
-            while()
+
+            //$user['link']=str_random(30);
+                $user['link']='mZVCqDbT9r7Ix0aH1m2Z9uu8hXExzd';
+            $activations=Activation::all();
+
+            foreach ($activations as $activation){
+                if($user['link']==$activation['token']){
+                    $user['link']=str_random(30);
+                };
+            }
 
             DB::table('user_activations')->insert(['id_user'=>$user['id'],'token'=>$user['link']]);
 
@@ -151,7 +160,7 @@ class RegisterController extends Controller
                 $message->subject('www.perfectrent.com - Activation Code');
             });
 
-            return back()->with('success', "We sent activation code, Please check your email");
+            return redirect()->route('login')->with('success', "We sent activation code, Please check your email");
 
         }
 
