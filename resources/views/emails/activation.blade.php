@@ -13,12 +13,7 @@
 
     <?php
 
-        $style=[
-        'body'=>'background-color:white; width:100%; margin:0; padding:0',
-        'header'=>"min-height:200px; background-color:#2db8af",
-        'h2'=>'color:#2db8af; font-size:2em; font-weight:bold',
-            'p'=>'font-size:1em; font-weight:bold'
-        ];
+
 
     ?>
 
