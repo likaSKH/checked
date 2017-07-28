@@ -13,6 +13,11 @@ h2{
     line-height: 5px;
     font-weight:600;
 }
+
+@font-face {
+    font-family: slogan;
+    src: url("Credit-Valley/CreditValley.ttf");
+}
 #navigation {
 
     background-color: #2db8af;
@@ -221,19 +226,6 @@ input:checked + .slider:before {
 .blocks:hover{
     box-shadow: #0d3625 0.5px 0.5px 5px;
 }
-/*
-.selection{
-    position: absolute;
-    top: -10%;
-    left: 80%;
-    height: 100px;
-    width: 100px;
-    box-shadow: #0f0f0f 1px 1px 60px;
-    background-color:#232424 ;
-    border-radius: 50%;
-    z-index: 5;
-
-}*/
 .show1{
     transition: 1s;
     position: relative;
@@ -249,5 +241,8 @@ input:checked + .slider:before {
     transition: 1s;
 }
 
+.slogan{
+    font-size: 3em;
+}
 
 

@@ -30,10 +30,9 @@ $(document).ready(function () {
     $("#ind").width('100%');
 
     $("#juridical").click(function (e) {
-
+        $(this).attr({'style': 'box-shadow:#0d3625 0.5px 0.5px 5px;float: right'});
+        $("#individuals").attr({'style':'float:left'});
         //border
-        $("#jur").width('100%');
-        $("#ind").width('0');
         //individuals or not
         $("#ind-form").attr('class', 'hide');
         $("#jur-form").attr('class', 'show');
@@ -52,9 +51,9 @@ $(document).ready(function () {
 
 
     $("#individuals").click(function (e) {
+        $("#juridical").attr({'style':'float:right'});
+        $(this).attr({'style': 'box-shadow:#0d3625 0.5px 0.5px 5px;float: left;'});
         //border
-        $("#jur").width('0');
-        $("#ind").width('100%');
         //individuals or not
         $("#ind-form").attr('class', 'show');
         $("#jur-form").attr('class', 'hide');
